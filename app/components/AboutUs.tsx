@@ -23,10 +23,10 @@ export const AboutUs = () => {
               height={iframeHeight}
               src='https://www.youtube.com/embed/Wuf30IaeH6o?si=OEo_RVYU7IqQ-4Ss'
               title='YouTube video player'
-              frameborder='0'
+              frameBorder='0'
               // className='border-8 border-solid border-olivergreen'
               allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-              allowfullscreen
+              allowFullScreen
             ></iframe>
           </div>
         </div>
@@ -37,9 +37,9 @@ export const AboutUs = () => {
               height={iframeHeight}
               src='https://www.youtube.com/embed/Ui6_8tHjAW8?si=MjKbndiKbFqoaqzj'
               title='YouTube video player'
-              frameborder='0'
+              frameBorder='0'
               allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-              allowfullscreen
+              allowFullScreen
             ></iframe>
           </div>
         </div>
@@ -50,9 +50,9 @@ export const AboutUs = () => {
               height={iframeHeight}
               src='https://www.youtube.com/embed/lUaFcmnYKYQ?si=20iLhaJ9DIGUZXhs'
               title='YouTube video player'
-              frameborder='0'
+              frameBorder='0'
               allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-              allowfullscreen
+              allowFullScreen
             ></iframe>
           </div>
         </div>
