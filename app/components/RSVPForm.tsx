@@ -69,7 +69,7 @@ export const RSVPForm = () => {
                 {errors.email && touched.email && errors.email}
               </div>
               <div className='question'>
-                <label htmlFor='food'>Tienes alguna restricción de comida?</label>
+                <label htmlFor='food'>Restricción de comida?</label>
                 <Field
                   type='text'
                   name='food'
