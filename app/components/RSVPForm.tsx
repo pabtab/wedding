@@ -11,9 +11,9 @@ interface Values {
 
 export const RSVPForm = () => {
   return (
-    <section className='h-screen text-center p-4'>
+    <section className='h-screen flex flex-col items-center p-4 w-full'>
       <h1 className='text-olivergreen'>RSVPForm</h1>
-      <div className='border-1 border-solid p-3 bg-white shadow-xl'>
+      <div className='border-1 border-solid p-3 bg-white shadow-xl lg:w-1/2 w-full'>
         <Formik
           initialValues={{ fullName: "", email: "", food: "" }}
           validate={(values: Values) => {
