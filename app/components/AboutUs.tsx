@@ -35,6 +35,19 @@ export const AboutUs = () => {
             <iframe
               width={iframeSize}
               height={iframeHeight}
+              src='https://www.youtube.com/embed/PGtBizeljKE?si=5Cmth6eR_dn2v3-T'
+              title='YouTube video player'
+              frameBorder='0'
+              allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+        <div className='monitor w-fit'>
+          <div className='monitorscreen'>
+            <iframe
+              width={iframeSize}
+              height={iframeHeight}
               src='https://www.youtube.com/embed/Ui6_8tHjAW8?si=MjKbndiKbFqoaqzj'
               title='YouTube video player'
               frameBorder='0'
@@ -49,6 +62,20 @@ export const AboutUs = () => {
               width={iframeSize}
               height={iframeHeight}
               src='https://www.youtube.com/embed/lUaFcmnYKYQ?si=20iLhaJ9DIGUZXhs'
+              title='YouTube video player'
+              frameBorder='0'
+              allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+        <div className='monitor w-fit'>
+          <h2 className='text-olivergreen text-2xl '>El día que nos conocimos</h2>
+          <div className='monitorscreen'>
+            <iframe
+              width={iframeSize}
+              height={iframeHeight}
+              src='https://www.youtube.com/embed/4WSzmrdBp3Q?si=fNCbnxeGvSINz1gA'
               title='YouTube video player'
               frameBorder='0'
               allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'

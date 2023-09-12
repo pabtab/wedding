@@ -1,6 +1,7 @@
 import React from "react";
 import { BiChurch, BiEnvelope } from "react-icons/bi";
 import { BsFillCalendarDateFill } from "react-icons/bs";
+import { GiClothes } from "react-icons/gi";
 import { Countdown } from "./Countdown";
 
 export const Hero = () => {
@@ -12,10 +13,13 @@ export const Hero = () => {
           <BsFillCalendarDateFill size={20} className='mr-3' />
           Septiembre 30 / 2023
         </h3>
-
         <h3 className='flex items-center'>
           <BiChurch size={20} className='mr-3' />
           San Antonio de Pereira
+        </h3>
+        <h3 className='flex items-center'>
+          <GiClothes size={20} className='mr-3' />
+          Vestimenta Formal
         </h3>
         <h3 className='flex items-center'>
           <BiEnvelope size={20} className='mr-3' />
