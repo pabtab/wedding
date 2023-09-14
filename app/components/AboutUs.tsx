@@ -14,8 +14,8 @@ export const AboutUs = () => {
   }, [width]);
   return (
     <section className='text-center'>
-      <h1 className='text-olivergreen mb-10'>AboutUs</h1>
-      <div className='lg:flex flex-wrap items-center justify-center'>
+      <h1 className='text-olivergreen my-10'>Un poco de nosotros...</h1>
+      <div className='flex flex-wrap items-center justify-center'>
         <div className='monitor w-fit'>
           <div className='monitorscreen'>
             <iframe
@@ -33,13 +33,12 @@ export const AboutUs = () => {
         <div className='monitor w-fit'>
           <div className='monitorscreen'>
             <iframe
+              src='https://player.vimeo.com/video/864499075?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
               width={iframeSize}
               height={iframeHeight}
-              src='https://www.youtube.com/embed/PGtBizeljKE?si=5Cmth6eR_dn2v3-T'
-              title='YouTube video player'
               frameBorder='0'
-              allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-              allowFullScreen
+              allow='autoplay; fullscreen; picture-in-picture'
+              title='Bolivia trip 2019 - GoPro Hero 7'
             ></iframe>
           </div>
         </div>

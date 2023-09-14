@@ -24,7 +24,7 @@ export const RSVPForm = () => {
 
   return (
     <section className='flex flex-col items-center p-4 w-full shadow-xl'>
-      <h1 className='text-olivergreen'>RSVPForm</h1>
+      <h1 className='text-olivergreen'>Asistencia</h1>
       <div className='border-1 border-solid p-3 bg-white shadow-xl lg:w-2/3 w-full text-center flex justify-center'>
         <iframe
           src='https://docs.google.com/forms/d/e/1FAIpQLSfFII1KFwRJEdvVE0c2MoCr_jq8c01ZVZxDP0iF_PzvWBM0oQ/viewform?embedded=true'
