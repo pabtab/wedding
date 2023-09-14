@@ -1,7 +1,8 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Formik, Field } from "formik";
 import { FormikHelpers } from "@/node_modules/formik/dist/types";
+import { useWindowSize } from "../hooks/useWindowSize";
 
 interface Values {
   fullName: string;
@@ -10,81 +11,29 @@ interface Values {
 }
 
 export const RSVPForm = () => {
-  return (
-    <section className='h-screen flex flex-col items-center p-4 w-full'>
-      <h1 className='text-olivergreen'>RSVPForm</h1>
-      <div className='border-1 border-solid p-3 bg-white shadow-xl lg:w-1/2 w-full'>
-        <Formik
-          initialValues={{ fullName: "", email: "", food: "" }}
-          validate={(values: Values) => {
-            const errors = {} as Values;
-            if (!values.fullName) {
-              errors.fullName = "Requerido";
-            } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
-              errors.email = "Correo invalido";
-            } else if (!values.food) {
-              errors.food = "Requerido";
-            }
-            return errors;
-          }}
-          onSubmit={(values: Values, { setSubmitting }: FormikHelpers<Values>) => {
-            setTimeout(() => {
-              alert(JSON.stringify(values, null, 2));
-              setSubmitting(false);
-            }, 400);
-          }}
-        >
-          {({
-            values,
-            errors,
-            touched,
-            handleChange,
-            handleBlur,
-            handleSubmit,
-            isSubmitting,
-            /* and other goodies */
-          }) => (
-            <form onSubmit={handleSubmit} className='flex flex-col'>
-              <div className='question'>
-                <label htmlFor='fullName'>Nombre Completo</label>
-                <Field
-                  type='text'
-                  name='fullName'
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  value={values.fullName}
-                />
-                {errors.fullName && touched.fullName && errors.fullName}
-              </div>
-              <div className='question'>
-                <label htmlFor='email'>Correo Electronico</label>
+  const [width, height] = useWindowSize();
+  const [iframeSize, setIframeSize] = useState(0);
 
-                <Field
-                  type='email'
-                  name='email'
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  value={values.email}
-                />
-                {errors.email && touched.email && errors.email}
-              </div>
-              <div className='question'>
-                <label htmlFor='food'>Restricción de comida?</label>
-                <Field
-                  type='text'
-                  name='food'
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  value={values.food}
-                />
-                {errors.food && touched.food && errors.food}
-              </div>
-              <button type='submit' disabled={isSubmitting}>
-                Submit
-              </button>
-            </form>
-          )}
-        </Formik>
+  useEffect(() => {
+    if (width > 1024) {
+      setIframeSize(900);
+    } else {
+      setIframeSize(400);
+    }
+  }, [width]);
+
+  return (
+    <section className='flex flex-col items-center p-4 w-full shadow-xl'>
+      <h1 className='text-olivergreen'>RSVPForm</h1>
+      <div className='border-1 border-solid p-3 bg-white shadow-xl lg:w-2/3 w-full text-center flex justify-center'>
+        <iframe
+          src='https://docs.google.com/forms/d/e/1FAIpQLSfFII1KFwRJEdvVE0c2MoCr_jq8c01ZVZxDP0iF_PzvWBM0oQ/viewform?embedded=true'
+          width={iframeSize}
+          height='1202'
+          frameBorder='0'
+        >
+          Cargando…
+        </iframe>
       </div>
     </section>
   );
